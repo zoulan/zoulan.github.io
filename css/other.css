@@ -1,0 +1,276 @@
+/*back to top button*/
+div.go-top {
+    display: none;
+    opacity: 0.6;
+    z-index: 999999;
+    position: fixed;
+    bottom: 113px;
+    left: 90%;
+    margin-left: 40px;
+    border: 1px solid;
+    border-color: rgb(44,62,80);
+    width: 38px;
+    height: 38px;
+    background-color: #00dda1;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+div.go-top:hover {
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+
+div.go-top div.arrow {
+    position: absolute;
+    left: 10px;
+    top: -1px;
+    width: 0;
+    height: 0;
+    border: 9px solid transparent;
+    border-bottom-color: rgb(44,62,80);
+}
+
+div.go-top div.stick {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 8px;
+    height: 14px;
+    display: block;
+    background-color: rgb(44,62,80);
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+}
+
+
+/*side bar*/
+.menu-espanso {
+  background-color: transparent;
+  position: fixed;
+    width: 340px;
+  height:100%;
+  top: 0px;
+  right: 0px;
+  overflow: hidden !important;
+  z-index: 5;
+}
+
+.menu,
+.linee {
+  cursor: pointer;
+}
+
+.menu {
+  float: right;
+  margin: 15px 50px 0 0;
+  height: 49px;
+  width: 49px;
+  border-radius: 50%;
+  background-color: rgb(44,62,80);
+  border: none;
+  transition: all 0.40s ease-out;
+}
+
+.over {
+  transform: scale(100);
+  transition: all 0.350s ease-in;
+  cursor: default;
+}
+
+.linea1 {
+  background: #00dda1;
+  height: 2px;
+  width: 15px;
+  position: absolute;
+  right: 33px;
+  top: 33px;
+  transition: all 0.3s;
+  margin-right: 34px;
+}
+
+.linea2 {
+  background: #00dda1;
+  height: 2px;
+  width: 15px;
+  position: absolute;
+  right: 33px;
+  top: 38px;
+  opacity: 1;
+  transition: opacity 0.5s;
+  margin-right: 34px;
+}
+
+.linea3 {
+  background: #00dda1;
+  height: 2px;
+  width: 15px;
+  position: absolute;
+  right: 33px;
+  top: 43px;
+  margin-right: 34px;
+}
+
+.overL1 {
+  animation: closetop 1s forwards;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+.overL2 {
+  opacity: 0;
+  transition: opacity 0.5s;
+  cursor: pointer;
+}
+
+.overL3 {
+  animation: closebottom 1s forwards;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+@keyframes closetop {
+  0% {
+    transform: translateY(5px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(5px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(5px) rotate(-45deg);
+  }
+}
+
+@keyframes closebottom {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-5px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(-5px) rotate(45deg);
+  }
+}
+
+.voci-menu {
+  visibility: hidden;
+  position: absolute;
+  right: 50px;
+  top: 160px;
+  opacity: 0;
+  transition: all 0.300s;
+  transition-delay: 0s;
+}
+
+.overvoci {
+  visibility: visible;
+  opacity: 1;
+  transition: all 0.400s;
+  transition-delay: 0.370s;
+  margin-right:40px;
+  margin-top:-40px;
+}
+
+.voci-menu ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+.voci-menu ul li {
+  margin: 20px 0px;
+}
+
+.voci-menu ul li {
+  text-decoration: none;
+  /*color: rgb(44,62,80);*/
+  color: #00dda1;
+  margin:20px 0px 0px 0px ;
+}
+
+.voci-menu ul li a{
+  text-decoration: none;
+  /*color: rgb(44,62,80);*/
+  color: #00dda1;
+  margin:20px 0px 0px 0px ;
+}
+.voci-menu ul li a:hover {
+  opacity: 0.7;
+}
+#QRcode{
+  width:100px;
+  height:100px;
+}
+.sidemenu{
+  font-weight: bold;
+}
+
+
+/*进度条*/
+.progress_bar .pro-bar {
+    background: hsl(0, 0%, 97%);
+    box-shadow: 0 1px 2px hsla(0, 0%, 0%, 0.1) inset;
+    height:4px;
+    margin-bottom: 12px;
+    margin-top: 50px;
+    position: relative;
+  }
+  .progress_bar .progress_bar_title{
+    /*color: hsl(218, 4%, 50%);*/
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    position: relative;
+    top: -28px;
+    z-index: 1;
+  }
+  .progress_bar .progress_number{
+    float: right;
+    margin-top: -24px;
+  }
+  .progress_bar .progress-bar-inner {
+    background-color: hsl(0, 0%, 88%);
+    display: block;
+    width: 0;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: width 1s linear 0s;
+    animation: animate-positive 2s;
+  }
+  .progress_bar .progress-bar-inner:before {
+    content: "";
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    position: absolute;
+    right: 1px;
+    top: 0;
+    z-index: 1;
+  }
+  .progress_bar .progress-bar-inner:after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    background-color: inherit;
+    border-radius: 50%;
+    position: absolute;
+    right: -4px;
+    top: -5px;
+  }
+  @-webkit-keyframes animate-positive{
+    0% { width: 0%; }
+  }
+  @keyframes animate-positive{
+    0% { width: 0%; }
+  }
+
