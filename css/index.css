@@ -116,7 +116,7 @@ body{
 	color:white;
 	text-align:center;
 	height: 60px;
-	background-image: url('/intro/pic/bgi2.png');
+	background-image: url('../../pic/bgi2.png');
 }
 .p-bgi{
 	padding: 20px;
