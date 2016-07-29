@@ -91,7 +91,7 @@ body{
 
 /*div2*/
 #div2{
-	height:700px;
+	height:900px;
 	width:100%;
 	background-color: rgb(44,62,80);
 	margin:0px auto;
@@ -116,7 +116,7 @@ body{
 	color:white;
 	text-align:center;
 	height: 60px;
-	background-image: url('/../../pic/bgi2.png');
+	background-image: url('/../intro/pic/bgi2.png');
 }
 .p-bgi{
 	padding: 20px;
